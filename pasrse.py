@@ -14,18 +14,28 @@ class Edge:
         self.type = type
 
 class DataNode:
-    def __init__(self, IRname, shape, type):
+    def __init__(self, IRname, shape, type, isTuple=False):
         self.IRname = IRname
         self.shape = shape  
         self.type = type
+        self.isTuple = isTuple
         self.forwrd_edges = []
         self.back_edges = []
 
 class OPNode(DataNode):
-    def __init__(self, IRname, shape, type):
-        super().__init__(IRname, shape, type)
+    def __init__(self, IRname, shape, type, isTuple=False):
+        super().__init__(IRname, shape, type, isTuple)
         self.attribtes = {}
         self.TIR = ""
+
+def Debug(g):
+    print("Nodes:")
+    for node in g.nodes.values():
+        print(f"  {node.IRname}: shape={node.shape}, type={node.type}, isTuple={node.isTuple}")
+    
+    # print("Edges:")
+    # for edge in g.edges:
+    #     print(f"  {edge.src} -> {edge.dest}: shape={edge.shape}, type={edge.type}")
 
 def IRparser(f):
     # node map
@@ -57,13 +67,32 @@ def IRparser(f):
                 # parse shape
                 shape_str = param_match.group("shape")
                 shape = [int(dim) for dim in shape_str.split(",") if dim.strip().isdigit()]
+                shape = [shape] 
 
                 # create DataNode and add to graph
                 g.nodes[name] = DataNode(name, shape, type)
-                
-                # test print
-                print(f"DataNode: {g.nodes[name].IRname}, shape: {g.nodes[name].shape}, type: {g.nodes[name].type}")
 
+            # output node
+            match = re.search(r'->\s*R.Tuple\(R.Tensor\(\((?P<shape>\d+(,\s*\d+)*,?)\),\s*dtype="(?P<dtype>[\w\d\.]+)"\)\):', line)
+            if not match:
+                print("Error: No Output Node.")
+                exit(1)
+            name = "output"
+            shape = [int(dim) for dim in match.group("shape").split(",") if dim.strip().isdigit()]
+            shape = [shape]
+            type = match.group("dtype")
+            g.nodes[name] = DataNode(name, shape, type, True)
+
+            # debug test output
+            Debug(g)
+
+        # parse op node
+        if "with R.dataflow():" in line:
+            while True:
+                if "R.output" in line:
+                    break
+                line = f.readline()
+                print(line)
 
 
 def main():
