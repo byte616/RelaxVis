@@ -42,6 +42,30 @@ def Debug(g):
     for edge in g.edges:
         print(f"  {edge.src} -> {edge.dest}: shape={edge.shape}, type={edge.type}")
 
+
+def parse_op(m, g):
+    # deal with the opnode parsing (name, type, shape, isTuple)
+    name = m.group("name")
+    type_str = m.group("type_str")
+    
+     # process type_str (isTuple / shape / dtype)
+    isTuple = False
+    if "R.Tuple" in type_str:
+        isTuple = True
+    shape_list = []
+    type_list = []
+    type_pattern = re.compile(r'R.Tensor\(\((?P<shape>\d+(,\s*\d+)*,?)\),\s*dtype="(?P<dtype>[\w\d\.]+)')
+    for type_match in type_pattern.finditer(type_str):
+        shape_str = type_match.group("shape")
+        shape = [int(dim) for dim in shape_str.split(",") if dim.strip().isdigit()]
+        dtype = type_match.group("dtype")
+        shape_list.append(shape)
+        type_list.append(dtype)
+
+    # create OPNode and add to graph
+    g.nodes[name] = OPNode(name, shape_list, type_list, isTuple)
+    return name
+
 def IRparser(g, f):
     # parse file content
     while True:
@@ -88,13 +112,22 @@ def IRparser(g, f):
             g.nodes[name] = DataNode(name, shape, type, True)
 
             
-
         # parse op node
         if "with R.dataflow():" in line:
             while True:
-                if "R.output" in line:
-                    break
+                # read next line
                 line = f.readline()
+
+                # break if reach end of dataflow block
+                if "R.output" in line:
+                    match = re.search(r'R\.output\((?P<args>.*)\)', line)
+                    last_node = match.group("args")
+                    edge = Edge(last_node, "output", g.nodes[last_node].shape, g.nodes[last_node].type)
+                    g.edges.append(edge)
+                    g.nodes["output"].back_edges.append(last_node)
+                    g.nodes[last_node].forwrd_edges.append("output")
+                    break
+                
                 # normal op node
                 op1_pattern = re.compile(
                     r'(?P<name>[\w_]+):\s*'
@@ -104,26 +137,10 @@ def IRparser(g, f):
                 )
                 m = op1_pattern.search(line)
                 if m: 
-                    name = m.group("name")
-                    type_str = m.group("type_str")
+                    # parse node basic info
+                    name = parse_op(m, g)
                     OPname = m.group("op_name")
                     args_str = m.group("args_str")
-
-                    # process type_str (isTuple / shape / dtype)
-                    isTuple = False
-                    if "R.Tuple" in type_str:
-                        isTuple = True
-                    shape_list = []
-                    type_list = []
-                    type_pattern = re.compile(r'R.Tensor\(\((?P<shape>\d+(,\s*\d+)*,?)\),\s*dtype="(?P<dtype>[\w\d\.]+)')
-                    for type_match in type_pattern.finditer(type_str):
-                        shape_str = type_match.group("shape")
-                        shape = [int(dim) for dim in shape_str.split(",") if dim.strip().isdigit()]
-                        dtype = type_match.group("dtype")
-                        shape_list.append(shape)
-                        type_list.append(dtype)
-
-                    g.nodes[name] = OPNode(name, shape_list, type_list, isTuple)
                     g.nodes[name].OPname = OPname
 
                     # process args_str (src nodes)
@@ -160,34 +177,18 @@ def IRparser(g, f):
 
 
                 # TupleGetItem case
-                op1_pattern = re.compile(
+                op2_pattern = re.compile(
                     r'(?P<name>[\w_]+):\s*'
                     r'(?P<type_str>R\..*?)\s*=\s*'
                     r'(?P<node>[\w_]+)\[(?P<node_idx>[\d]+)\]'
                 )
-                m = op1_pattern.search(line)
+                m = op2_pattern.search(line)
                 if m:
-                    name = m.group("name")
-                    type_str = m.group("type_str")
+                    # parse node basic info
+                    name = parse_op(m, g)
                     node = m.group("node")
                     node_idx = m.group("node_idx")
                     Opname = "TupleGetItem[" + node_idx + "]"
-
-                    # process type_str (isTuple / shape / dtype)
-                    isTuple = False
-                    if "R.Tuple" in type_str:
-                        isTuple = True
-                    shape_list = []
-                    type_list = []
-                    type_pattern = re.compile(r'R.Tensor\(\((?P<shape>\d+(,\s*\d+)*,?)\),\s*dtype="(?P<dtype>[\w\d\.]+)')
-                    for type_match in type_pattern.finditer(type_str):
-                        shape_str = type_match.group("shape")
-                        shape = [int(dim) for dim in shape_str.split(",") if dim.strip().isdigit()]
-                        dtype = type_match.group("dtype")
-                        shape_list.append(shape)
-                        type_list.append(dtype)
-
-                    g.nodes[name] = OPNode(name, shape_list, type_list, isTuple)
                     g.nodes[name].OPname = "TupleGetItem"
 
                     # process src node
@@ -202,32 +203,17 @@ def IRparser(g, f):
                     continue
 
 
-                op2_pattern = re.compile(
+                # MakeTuple case
+                op3_pattern = re.compile(
                     r'(?P<name>[\w_]+):\s*'
                     r'(?P<type_str>R\..*?)\s*=\s*'
                     r'\((?P<args_str>.*)\)'
                 )
-                m = op2_pattern.search(line)
+                m = op3_pattern.search(line)
                 if m:   
-                    name = m.group("name")
-                    type_str = m.group("type_str")
+                    # parse node basic info
+                    name = parse_op(m, g)
                     args_str = m.group("args_str")
-
-                    # process type_str (isTuple / shape / dtype)
-                    isTuple = False
-                    if "R.Tuple" in type_str:
-                        isTuple = True
-                    shape_list = []
-                    type_list = []
-                    type_pattern = re.compile(r'R.Tensor\(\((?P<shape>\d+(,\s*\d+)*,?)\),\s*dtype="(?P<dtype>[\w\d\.]+)')
-                    for type_match in type_pattern.finditer(type_str):
-                        shape_str = type_match.group("shape")
-                        shape = [int(dim) for dim in shape_str.split(",") if dim.strip().isdigit()]
-                        dtype = type_match.group("dtype")
-                        shape_list.append(shape)
-                        type_list.append(dtype)
-
-                    g.nodes[name] = OPNode(name, shape_list, type_list, isTuple)
                     g.nodes[name].OPname = "MakeTuple"
 
                     # process args_str (src nodes)
@@ -242,8 +228,7 @@ def IRparser(g, f):
                         else:
                             print(f"Error: Node {arg} not found.")
                             exit(1)
-                   
-                   
+                            
 def main():
     # parse command line arguments
     parser = argparse.ArgumentParser(description = "Arguments: ")
