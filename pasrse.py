@@ -1,6 +1,8 @@
 import argparse
 import re
 import ast
+import json
+import os
 
 class Graph:
     def __init__(self):
@@ -41,6 +43,43 @@ def Debug(g):
     print("Edges:")
     for edge in g.edges:
         print(f"  {edge.src} -> {edge.dest}: shape={edge.shape}, type={edge.type}")
+
+def Export_json(g, filepath):
+    # prepare data for JSON serialization
+    nodes_list = []
+    for node in g.nodes.values():
+        node_dict = {
+            "IRname": node.IRname,
+            "shape": node.shape,
+            "type": node.type,
+            "isTuple": node.isTuple
+        }
+        if isinstance(node, OPNode):
+            node_dict["OPname"] = node.OPname
+            node_dict["attributes"] = node.attribtes
+            node_dict["TIR"] = node.TIR
+        nodes_list.append(node_dict)
+
+    edges_list = []
+    for edge in g.edges:
+        edge_dict = {
+            "src": edge.src,
+            "dest": edge.dest,
+            "shape": edge.shape,
+            "type": edge.type
+        }
+        edges_list.append(edge_dict)
+
+    graph_dict = {
+        "nodes": nodes_list,
+        "edges": edges_list
+    }
+
+    # write to JSON file
+    json_filepath = os.path.splitext(filepath)[0] + ".json"
+    with open(json_filepath, 'w', encoding='utf-8') as json_file:
+        json.dump(graph_dict, json_file, indent=4)
+    print(f"Graph exported to {json_filepath}")
 
 
 def parse_op(m, g):
@@ -241,6 +280,7 @@ def main():
             g = Graph() # create empty graph, record nodes and edges
             IRparser(g, f) # parse file and build graph
             Debug(g) # debug test output
+            Export_json(g, args.filepath) # export to json file
 
     except FileNotFoundError:
         print(f"File not found: {args.filepath}")

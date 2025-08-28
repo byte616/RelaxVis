@@ -1,0 +1,5932 @@
+{
+    "nodes": [
+        {
+            "IRname": "x",
+            "shape": [
+                [
+                    1,
+                    3,
+                    224,
+                    224
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_conv1_weight",
+            "shape": [
+                [
+                    64,
+                    3,
+                    7,
+                    7
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_bn1_weight",
+            "shape": [
+                [
+                    64
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_bn1_bias",
+            "shape": [
+                [
+                    64
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer1_0_conv1_weight",
+            "shape": [
+                [
+                    64,
+                    64,
+                    3,
+                    3
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer1_0_bn1_weight",
+            "shape": [
+                [
+                    64
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer1_0_bn1_bias",
+            "shape": [
+                [
+                    64
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer1_0_conv2_weight",
+            "shape": [
+                [
+                    64,
+                    64,
+                    3,
+                    3
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer1_0_bn2_weight",
+            "shape": [
+                [
+                    64
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer1_0_bn2_bias",
+            "shape": [
+                [
+                    64
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer1_1_conv1_weight",
+            "shape": [
+                [
+                    64,
+                    64,
+                    3,
+                    3
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer1_1_bn1_weight",
+            "shape": [
+                [
+                    64
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer1_1_bn1_bias",
+            "shape": [
+                [
+                    64
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer1_1_conv2_weight",
+            "shape": [
+                [
+                    64,
+                    64,
+                    3,
+                    3
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer1_1_bn2_weight",
+            "shape": [
+                [
+                    64
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer1_1_bn2_bias",
+            "shape": [
+                [
+                    64
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer2_0_conv1_weight",
+            "shape": [
+                [
+                    128,
+                    64,
+                    3,
+                    3
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer2_0_bn1_weight",
+            "shape": [
+                [
+                    128
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer2_0_bn1_bias",
+            "shape": [
+                [
+                    128
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer2_0_conv2_weight",
+            "shape": [
+                [
+                    128,
+                    128,
+                    3,
+                    3
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer2_0_bn2_weight",
+            "shape": [
+                [
+                    128
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer2_0_bn2_bias",
+            "shape": [
+                [
+                    128
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer2_0_downsample_0_weight",
+            "shape": [
+                [
+                    128,
+                    64,
+                    1,
+                    1
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer2_0_downsample_1_weight",
+            "shape": [
+                [
+                    128
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer2_0_downsample_1_bias",
+            "shape": [
+                [
+                    128
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer2_1_conv1_weight",
+            "shape": [
+                [
+                    128,
+                    128,
+                    3,
+                    3
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer2_1_bn1_weight",
+            "shape": [
+                [
+                    128
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer2_1_bn1_bias",
+            "shape": [
+                [
+                    128
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer2_1_conv2_weight",
+            "shape": [
+                [
+                    128,
+                    128,
+                    3,
+                    3
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer2_1_bn2_weight",
+            "shape": [
+                [
+                    128
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer2_1_bn2_bias",
+            "shape": [
+                [
+                    128
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer3_0_conv1_weight",
+            "shape": [
+                [
+                    256,
+                    128,
+                    3,
+                    3
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer3_0_bn1_weight",
+            "shape": [
+                [
+                    256
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer3_0_bn1_bias",
+            "shape": [
+                [
+                    256
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer3_0_conv2_weight",
+            "shape": [
+                [
+                    256,
+                    256,
+                    3,
+                    3
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer3_0_bn2_weight",
+            "shape": [
+                [
+                    256
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer3_0_bn2_bias",
+            "shape": [
+                [
+                    256
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer3_0_downsample_0_weight",
+            "shape": [
+                [
+                    256,
+                    128,
+                    1,
+                    1
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer3_0_downsample_1_weight",
+            "shape": [
+                [
+                    256
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer3_0_downsample_1_bias",
+            "shape": [
+                [
+                    256
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer3_1_conv1_weight",
+            "shape": [
+                [
+                    256,
+                    256,
+                    3,
+                    3
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer3_1_bn1_weight",
+            "shape": [
+                [
+                    256
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer3_1_bn1_bias",
+            "shape": [
+                [
+                    256
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer3_1_conv2_weight",
+            "shape": [
+                [
+                    256,
+                    256,
+                    3,
+                    3
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer3_1_bn2_weight",
+            "shape": [
+                [
+                    256
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer3_1_bn2_bias",
+            "shape": [
+                [
+                    256
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer4_0_conv1_weight",
+            "shape": [
+                [
+                    512,
+                    256,
+                    3,
+                    3
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer4_0_bn1_weight",
+            "shape": [
+                [
+                    512
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer4_0_bn1_bias",
+            "shape": [
+                [
+                    512
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer4_0_conv2_weight",
+            "shape": [
+                [
+                    512,
+                    512,
+                    3,
+                    3
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer4_0_bn2_weight",
+            "shape": [
+                [
+                    512
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer4_0_bn2_bias",
+            "shape": [
+                [
+                    512
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer4_0_downsample_0_weight",
+            "shape": [
+                [
+                    512,
+                    256,
+                    1,
+                    1
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer4_0_downsample_1_weight",
+            "shape": [
+                [
+                    512
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer4_0_downsample_1_bias",
+            "shape": [
+                [
+                    512
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer4_1_conv1_weight",
+            "shape": [
+                [
+                    512,
+                    512,
+                    3,
+                    3
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer4_1_bn1_weight",
+            "shape": [
+                [
+                    512
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer4_1_bn1_bias",
+            "shape": [
+                [
+                    512
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer4_1_conv2_weight",
+            "shape": [
+                [
+                    512,
+                    512,
+                    3,
+                    3
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer4_1_bn2_weight",
+            "shape": [
+                [
+                    512
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_layer4_1_bn2_bias",
+            "shape": [
+                [
+                    512
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_fc_weight",
+            "shape": [
+                [
+                    1000,
+                    512
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "p_fc_bias",
+            "shape": [
+                [
+                    1000
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false
+        },
+        {
+            "IRname": "output",
+            "shape": [
+                [
+                    1,
+                    1000
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": true
+        },
+        {
+            "IRname": "lv",
+            "shape": [
+                [
+                    1,
+                    64,
+                    112,
+                    112
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.conv2d",
+            "attributes": {
+                "strides": "[2, 2]",
+                "padding": "[3, 3, 3, 3]",
+                "dilation": "[1, 1]",
+                "groups": "1",
+                "data_layout": "'NCHW'",
+                "kernel_layout": "'OIHW'",
+                "out_layout": "'NCHW'",
+                "out_dtype": "'float32'"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "lv1",
+            "shape": [
+                [
+                    1,
+                    64,
+                    112,
+                    112
+                ],
+                [
+                    64
+                ],
+                [
+                    64
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ],
+            "isTuple": true,
+            "OPname": "R.nn.batch_norm",
+            "attributes": {
+                "axis": "1",
+                "epsilon": "1e-05",
+                "center": "True",
+                "scale": "True",
+                "momentum": "0.1",
+                "training": "True"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "metadata_0",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "metadata_1",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "lv2",
+            "shape": [
+                [
+                    1,
+                    64,
+                    112,
+                    112
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "TupleGetItem",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv3",
+            "shape": [
+                [
+                    1,
+                    64,
+                    112,
+                    112
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.relu",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv4",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.max_pool2d",
+            "attributes": {
+                "pool_size": "[3, 3]",
+                "strides": "[2, 2]",
+                "dilation": "[1, 1]",
+                "padding": "[1, 1, 1, 1]",
+                "ceil_mode": "False",
+                "count_include_pad": "False",
+                "layout": "'NCHW'",
+                "out_layout": "'NCHW'"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "lv5",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.conv2d",
+            "attributes": {
+                "strides": "[1, 1]",
+                "padding": "[1, 1, 1, 1]",
+                "dilation": "[1, 1]",
+                "groups": "1",
+                "data_layout": "'NCHW'",
+                "kernel_layout": "'OIHW'",
+                "out_layout": "'NCHW'",
+                "out_dtype": "'float32'"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "lv6",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ],
+                [
+                    64
+                ],
+                [
+                    64
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ],
+            "isTuple": true,
+            "OPname": "R.nn.batch_norm",
+            "attributes": {
+                "axis": "1",
+                "epsilon": "1e-05",
+                "center": "True",
+                "scale": "True",
+                "momentum": "0.1",
+                "training": "True"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "metadata_2",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "metadata_3",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "lv7",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "TupleGetItem",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv8",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.relu",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv9",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.conv2d",
+            "attributes": {
+                "strides": "[1, 1]",
+                "padding": "[1, 1, 1, 1]",
+                "dilation": "[1, 1]",
+                "groups": "1",
+                "data_layout": "'NCHW'",
+                "kernel_layout": "'OIHW'",
+                "out_layout": "'NCHW'",
+                "out_dtype": "'float32'"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "lv10",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ],
+                [
+                    64
+                ],
+                [
+                    64
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ],
+            "isTuple": true,
+            "OPname": "R.nn.batch_norm",
+            "attributes": {
+                "axis": "1",
+                "epsilon": "1e-05",
+                "center": "True",
+                "scale": "True",
+                "momentum": "0.1",
+                "training": "True"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "metadata_4",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "metadata_5",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "lv11",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "TupleGetItem",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv12",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.add",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv13",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.relu",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv14",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.conv2d",
+            "attributes": {
+                "strides": "[1, 1]",
+                "padding": "[1, 1, 1, 1]",
+                "dilation": "[1, 1]",
+                "groups": "1",
+                "data_layout": "'NCHW'",
+                "kernel_layout": "'OIHW'",
+                "out_layout": "'NCHW'",
+                "out_dtype": "'float32'"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "lv15",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ],
+                [
+                    64
+                ],
+                [
+                    64
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ],
+            "isTuple": true,
+            "OPname": "R.nn.batch_norm",
+            "attributes": {
+                "axis": "1",
+                "epsilon": "1e-05",
+                "center": "True",
+                "scale": "True",
+                "momentum": "0.1",
+                "training": "True"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "metadata_6",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "metadata_7",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "lv16",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "TupleGetItem",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv17",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.relu",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv18",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.conv2d",
+            "attributes": {
+                "strides": "[1, 1]",
+                "padding": "[1, 1, 1, 1]",
+                "dilation": "[1, 1]",
+                "groups": "1",
+                "data_layout": "'NCHW'",
+                "kernel_layout": "'OIHW'",
+                "out_layout": "'NCHW'",
+                "out_dtype": "'float32'"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "lv19",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ],
+                [
+                    64
+                ],
+                [
+                    64
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ],
+            "isTuple": true,
+            "OPname": "R.nn.batch_norm",
+            "attributes": {
+                "axis": "1",
+                "epsilon": "1e-05",
+                "center": "True",
+                "scale": "True",
+                "momentum": "0.1",
+                "training": "True"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "metadata_8",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "metadata_9",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "lv20",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "TupleGetItem",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv21",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.add",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv22",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.relu",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv23",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.conv2d",
+            "attributes": {
+                "strides": "[2, 2]",
+                "padding": "[1, 1, 1, 1]",
+                "dilation": "[1, 1]",
+                "groups": "1",
+                "data_layout": "'NCHW'",
+                "kernel_layout": "'OIHW'",
+                "out_layout": "'NCHW'",
+                "out_dtype": "'float32'"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "lv24",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ],
+                [
+                    128
+                ],
+                [
+                    128
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ],
+            "isTuple": true,
+            "OPname": "R.nn.batch_norm",
+            "attributes": {
+                "axis": "1",
+                "epsilon": "1e-05",
+                "center": "True",
+                "scale": "True",
+                "momentum": "0.1",
+                "training": "True"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "metadata_10",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "metadata_11",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "lv25",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "TupleGetItem",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv26",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.relu",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv27",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.conv2d",
+            "attributes": {
+                "strides": "[1, 1]",
+                "padding": "[1, 1, 1, 1]",
+                "dilation": "[1, 1]",
+                "groups": "1",
+                "data_layout": "'NCHW'",
+                "kernel_layout": "'OIHW'",
+                "out_layout": "'NCHW'",
+                "out_dtype": "'float32'"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "lv28",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ],
+                [
+                    128
+                ],
+                [
+                    128
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ],
+            "isTuple": true,
+            "OPname": "R.nn.batch_norm",
+            "attributes": {
+                "axis": "1",
+                "epsilon": "1e-05",
+                "center": "True",
+                "scale": "True",
+                "momentum": "0.1",
+                "training": "True"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "metadata_12",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "metadata_13",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "lv29",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "TupleGetItem",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv30",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.conv2d",
+            "attributes": {
+                "strides": "[2, 2]",
+                "padding": "[0, 0, 0, 0]",
+                "dilation": "[1, 1]",
+                "groups": "1",
+                "data_layout": "'NCHW'",
+                "kernel_layout": "'OIHW'",
+                "out_layout": "'NCHW'",
+                "out_dtype": "'float32'"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "lv31",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ],
+                [
+                    128
+                ],
+                [
+                    128
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ],
+            "isTuple": true,
+            "OPname": "R.nn.batch_norm",
+            "attributes": {
+                "axis": "1",
+                "epsilon": "1e-05",
+                "center": "True",
+                "scale": "True",
+                "momentum": "0.1",
+                "training": "True"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "metadata_14",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "metadata_15",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "lv32",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "TupleGetItem",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv33",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.add",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv34",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.relu",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv35",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.conv2d",
+            "attributes": {
+                "strides": "[1, 1]",
+                "padding": "[1, 1, 1, 1]",
+                "dilation": "[1, 1]",
+                "groups": "1",
+                "data_layout": "'NCHW'",
+                "kernel_layout": "'OIHW'",
+                "out_layout": "'NCHW'",
+                "out_dtype": "'float32'"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "lv36",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ],
+                [
+                    128
+                ],
+                [
+                    128
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ],
+            "isTuple": true,
+            "OPname": "R.nn.batch_norm",
+            "attributes": {
+                "axis": "1",
+                "epsilon": "1e-05",
+                "center": "True",
+                "scale": "True",
+                "momentum": "0.1",
+                "training": "True"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "metadata_16",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "metadata_17",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "lv37",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "TupleGetItem",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv38",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.relu",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv39",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.conv2d",
+            "attributes": {
+                "strides": "[1, 1]",
+                "padding": "[1, 1, 1, 1]",
+                "dilation": "[1, 1]",
+                "groups": "1",
+                "data_layout": "'NCHW'",
+                "kernel_layout": "'OIHW'",
+                "out_layout": "'NCHW'",
+                "out_dtype": "'float32'"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "lv40",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ],
+                [
+                    128
+                ],
+                [
+                    128
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ],
+            "isTuple": true,
+            "OPname": "R.nn.batch_norm",
+            "attributes": {
+                "axis": "1",
+                "epsilon": "1e-05",
+                "center": "True",
+                "scale": "True",
+                "momentum": "0.1",
+                "training": "True"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "metadata_18",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "metadata_19",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "lv41",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "TupleGetItem",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv42",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.add",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv43",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.relu",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv44",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.conv2d",
+            "attributes": {
+                "strides": "[2, 2]",
+                "padding": "[1, 1, 1, 1]",
+                "dilation": "[1, 1]",
+                "groups": "1",
+                "data_layout": "'NCHW'",
+                "kernel_layout": "'OIHW'",
+                "out_layout": "'NCHW'",
+                "out_dtype": "'float32'"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "lv45",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ],
+                [
+                    256
+                ],
+                [
+                    256
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ],
+            "isTuple": true,
+            "OPname": "R.nn.batch_norm",
+            "attributes": {
+                "axis": "1",
+                "epsilon": "1e-05",
+                "center": "True",
+                "scale": "True",
+                "momentum": "0.1",
+                "training": "True"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "metadata_20",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "metadata_21",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "lv46",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "TupleGetItem",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv47",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.relu",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv48",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.conv2d",
+            "attributes": {
+                "strides": "[1, 1]",
+                "padding": "[1, 1, 1, 1]",
+                "dilation": "[1, 1]",
+                "groups": "1",
+                "data_layout": "'NCHW'",
+                "kernel_layout": "'OIHW'",
+                "out_layout": "'NCHW'",
+                "out_dtype": "'float32'"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "lv49",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ],
+                [
+                    256
+                ],
+                [
+                    256
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ],
+            "isTuple": true,
+            "OPname": "R.nn.batch_norm",
+            "attributes": {
+                "axis": "1",
+                "epsilon": "1e-05",
+                "center": "True",
+                "scale": "True",
+                "momentum": "0.1",
+                "training": "True"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "metadata_22",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "metadata_23",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "lv50",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "TupleGetItem",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv51",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.conv2d",
+            "attributes": {
+                "strides": "[2, 2]",
+                "padding": "[0, 0, 0, 0]",
+                "dilation": "[1, 1]",
+                "groups": "1",
+                "data_layout": "'NCHW'",
+                "kernel_layout": "'OIHW'",
+                "out_layout": "'NCHW'",
+                "out_dtype": "'float32'"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "lv52",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ],
+                [
+                    256
+                ],
+                [
+                    256
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ],
+            "isTuple": true,
+            "OPname": "R.nn.batch_norm",
+            "attributes": {
+                "axis": "1",
+                "epsilon": "1e-05",
+                "center": "True",
+                "scale": "True",
+                "momentum": "0.1",
+                "training": "True"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "metadata_24",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "metadata_25",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "lv53",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "TupleGetItem",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv54",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.add",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv55",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.relu",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv56",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.conv2d",
+            "attributes": {
+                "strides": "[1, 1]",
+                "padding": "[1, 1, 1, 1]",
+                "dilation": "[1, 1]",
+                "groups": "1",
+                "data_layout": "'NCHW'",
+                "kernel_layout": "'OIHW'",
+                "out_layout": "'NCHW'",
+                "out_dtype": "'float32'"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "lv57",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ],
+                [
+                    256
+                ],
+                [
+                    256
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ],
+            "isTuple": true,
+            "OPname": "R.nn.batch_norm",
+            "attributes": {
+                "axis": "1",
+                "epsilon": "1e-05",
+                "center": "True",
+                "scale": "True",
+                "momentum": "0.1",
+                "training": "True"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "metadata_26",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "metadata_27",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "lv58",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "TupleGetItem",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv59",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.relu",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv60",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.conv2d",
+            "attributes": {
+                "strides": "[1, 1]",
+                "padding": "[1, 1, 1, 1]",
+                "dilation": "[1, 1]",
+                "groups": "1",
+                "data_layout": "'NCHW'",
+                "kernel_layout": "'OIHW'",
+                "out_layout": "'NCHW'",
+                "out_dtype": "'float32'"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "lv61",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ],
+                [
+                    256
+                ],
+                [
+                    256
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ],
+            "isTuple": true,
+            "OPname": "R.nn.batch_norm",
+            "attributes": {
+                "axis": "1",
+                "epsilon": "1e-05",
+                "center": "True",
+                "scale": "True",
+                "momentum": "0.1",
+                "training": "True"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "metadata_28",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "metadata_29",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "lv62",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "TupleGetItem",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv63",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.add",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv64",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.relu",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv65",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.conv2d",
+            "attributes": {
+                "strides": "[2, 2]",
+                "padding": "[1, 1, 1, 1]",
+                "dilation": "[1, 1]",
+                "groups": "1",
+                "data_layout": "'NCHW'",
+                "kernel_layout": "'OIHW'",
+                "out_layout": "'NCHW'",
+                "out_dtype": "'float32'"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "lv66",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ],
+                [
+                    512
+                ],
+                [
+                    512
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ],
+            "isTuple": true,
+            "OPname": "R.nn.batch_norm",
+            "attributes": {
+                "axis": "1",
+                "epsilon": "1e-05",
+                "center": "True",
+                "scale": "True",
+                "momentum": "0.1",
+                "training": "True"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "metadata_30",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "metadata_31",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "lv67",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "TupleGetItem",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv68",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.relu",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv69",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.conv2d",
+            "attributes": {
+                "strides": "[1, 1]",
+                "padding": "[1, 1, 1, 1]",
+                "dilation": "[1, 1]",
+                "groups": "1",
+                "data_layout": "'NCHW'",
+                "kernel_layout": "'OIHW'",
+                "out_layout": "'NCHW'",
+                "out_dtype": "'float32'"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "lv70",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ],
+                [
+                    512
+                ],
+                [
+                    512
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ],
+            "isTuple": true,
+            "OPname": "R.nn.batch_norm",
+            "attributes": {
+                "axis": "1",
+                "epsilon": "1e-05",
+                "center": "True",
+                "scale": "True",
+                "momentum": "0.1",
+                "training": "True"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "metadata_32",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "metadata_33",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "lv71",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "TupleGetItem",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv72",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.conv2d",
+            "attributes": {
+                "strides": "[2, 2]",
+                "padding": "[0, 0, 0, 0]",
+                "dilation": "[1, 1]",
+                "groups": "1",
+                "data_layout": "'NCHW'",
+                "kernel_layout": "'OIHW'",
+                "out_layout": "'NCHW'",
+                "out_dtype": "'float32'"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "lv73",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ],
+                [
+                    512
+                ],
+                [
+                    512
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ],
+            "isTuple": true,
+            "OPname": "R.nn.batch_norm",
+            "attributes": {
+                "axis": "1",
+                "epsilon": "1e-05",
+                "center": "True",
+                "scale": "True",
+                "momentum": "0.1",
+                "training": "True"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "metadata_34",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "metadata_35",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "lv74",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "TupleGetItem",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv75",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.add",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv76",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.relu",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv77",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.conv2d",
+            "attributes": {
+                "strides": "[1, 1]",
+                "padding": "[1, 1, 1, 1]",
+                "dilation": "[1, 1]",
+                "groups": "1",
+                "data_layout": "'NCHW'",
+                "kernel_layout": "'OIHW'",
+                "out_layout": "'NCHW'",
+                "out_dtype": "'float32'"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "lv78",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ],
+                [
+                    512
+                ],
+                [
+                    512
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ],
+            "isTuple": true,
+            "OPname": "R.nn.batch_norm",
+            "attributes": {
+                "axis": "1",
+                "epsilon": "1e-05",
+                "center": "True",
+                "scale": "True",
+                "momentum": "0.1",
+                "training": "True"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "metadata_36",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "metadata_37",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "lv79",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "TupleGetItem",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv80",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.relu",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv81",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.conv2d",
+            "attributes": {
+                "strides": "[1, 1]",
+                "padding": "[1, 1, 1, 1]",
+                "dilation": "[1, 1]",
+                "groups": "1",
+                "data_layout": "'NCHW'",
+                "kernel_layout": "'OIHW'",
+                "out_layout": "'NCHW'",
+                "out_dtype": "'float32'"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "lv82",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ],
+                [
+                    512
+                ],
+                [
+                    512
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ],
+            "isTuple": true,
+            "OPname": "R.nn.batch_norm",
+            "attributes": {
+                "axis": "1",
+                "epsilon": "1e-05",
+                "center": "True",
+                "scale": "True",
+                "momentum": "0.1",
+                "training": "True"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "metadata_38",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "metadata_39",
+            "shape": null,
+            "type": "relax.expr.Constant",
+            "isTuple": false
+        },
+        {
+            "IRname": "lv83",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "TupleGetItem",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv84",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.add",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv85",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.relu",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv86",
+            "shape": [
+                [
+                    1,
+                    512,
+                    1,
+                    1
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.nn.adaptive_avg_pool2d",
+            "attributes": {
+                "output_size": "[1, 1]",
+                "layout": "'NCHW'",
+                "out_layout": "'NCHW'"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "lv87",
+            "shape": [
+                [
+                    1,
+                    512
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.reshape",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "lv88",
+            "shape": [
+                [
+                    512,
+                    1000
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.permute_dims",
+            "attributes": {
+                "axes": "None"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "lv89",
+            "shape": [
+                [
+                    1,
+                    1000
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.matmul",
+            "attributes": {
+                "out_dtype": "'float32'"
+            },
+            "TIR": ""
+        },
+        {
+            "IRname": "lv90",
+            "shape": [
+                [
+                    1,
+                    1000
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": false,
+            "OPname": "R.add",
+            "attributes": {},
+            "TIR": ""
+        },
+        {
+            "IRname": "gv",
+            "shape": [
+                [
+                    1,
+                    1000
+                ]
+            ],
+            "type": [
+                "float32"
+            ],
+            "isTuple": true,
+            "OPname": "MakeTuple",
+            "attributes": {},
+            "TIR": ""
+        }
+    ],
+    "edges": [
+        {
+            "src": "x",
+            "dest": "lv",
+            "shape": [
+                [
+                    1,
+                    3,
+                    224,
+                    224
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_conv1_weight",
+            "dest": "lv",
+            "shape": [
+                [
+                    64,
+                    3,
+                    7,
+                    7
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv",
+            "dest": "lv1",
+            "shape": [
+                [
+                    1,
+                    64,
+                    112,
+                    112
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_bn1_weight",
+            "dest": "lv1",
+            "shape": [
+                [
+                    64
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_bn1_bias",
+            "dest": "lv1",
+            "shape": [
+                [
+                    64
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "metadata_0",
+            "dest": "lv1",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "metadata_1",
+            "dest": "lv1",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "lv1",
+            "dest": "lv2",
+            "shape": [
+                [
+                    1,
+                    64,
+                    112,
+                    112
+                ],
+                [
+                    64
+                ],
+                [
+                    64
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ]
+        },
+        {
+            "src": "lv2",
+            "dest": "lv3",
+            "shape": [
+                [
+                    1,
+                    64,
+                    112,
+                    112
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv3",
+            "dest": "lv4",
+            "shape": [
+                [
+                    1,
+                    64,
+                    112,
+                    112
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv4",
+            "dest": "lv5",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer1_0_conv1_weight",
+            "dest": "lv5",
+            "shape": [
+                [
+                    64,
+                    64,
+                    3,
+                    3
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv5",
+            "dest": "lv6",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer1_0_bn1_weight",
+            "dest": "lv6",
+            "shape": [
+                [
+                    64
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer1_0_bn1_bias",
+            "dest": "lv6",
+            "shape": [
+                [
+                    64
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "metadata_2",
+            "dest": "lv6",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "metadata_3",
+            "dest": "lv6",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "lv6",
+            "dest": "lv7",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ],
+                [
+                    64
+                ],
+                [
+                    64
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ]
+        },
+        {
+            "src": "lv7",
+            "dest": "lv8",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv8",
+            "dest": "lv9",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer1_0_conv2_weight",
+            "dest": "lv9",
+            "shape": [
+                [
+                    64,
+                    64,
+                    3,
+                    3
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv9",
+            "dest": "lv10",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer1_0_bn2_weight",
+            "dest": "lv10",
+            "shape": [
+                [
+                    64
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer1_0_bn2_bias",
+            "dest": "lv10",
+            "shape": [
+                [
+                    64
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "metadata_4",
+            "dest": "lv10",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "metadata_5",
+            "dest": "lv10",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "lv10",
+            "dest": "lv11",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ],
+                [
+                    64
+                ],
+                [
+                    64
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ]
+        },
+        {
+            "src": "lv11",
+            "dest": "lv12",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv4",
+            "dest": "lv12",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv12",
+            "dest": "lv13",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv13",
+            "dest": "lv14",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer1_1_conv1_weight",
+            "dest": "lv14",
+            "shape": [
+                [
+                    64,
+                    64,
+                    3,
+                    3
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv14",
+            "dest": "lv15",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer1_1_bn1_weight",
+            "dest": "lv15",
+            "shape": [
+                [
+                    64
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer1_1_bn1_bias",
+            "dest": "lv15",
+            "shape": [
+                [
+                    64
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "metadata_6",
+            "dest": "lv15",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "metadata_7",
+            "dest": "lv15",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "lv15",
+            "dest": "lv16",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ],
+                [
+                    64
+                ],
+                [
+                    64
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ]
+        },
+        {
+            "src": "lv16",
+            "dest": "lv17",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv17",
+            "dest": "lv18",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer1_1_conv2_weight",
+            "dest": "lv18",
+            "shape": [
+                [
+                    64,
+                    64,
+                    3,
+                    3
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv18",
+            "dest": "lv19",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer1_1_bn2_weight",
+            "dest": "lv19",
+            "shape": [
+                [
+                    64
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer1_1_bn2_bias",
+            "dest": "lv19",
+            "shape": [
+                [
+                    64
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "metadata_8",
+            "dest": "lv19",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "metadata_9",
+            "dest": "lv19",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "lv19",
+            "dest": "lv20",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ],
+                [
+                    64
+                ],
+                [
+                    64
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ]
+        },
+        {
+            "src": "lv20",
+            "dest": "lv21",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv13",
+            "dest": "lv21",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv21",
+            "dest": "lv22",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv22",
+            "dest": "lv23",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer2_0_conv1_weight",
+            "dest": "lv23",
+            "shape": [
+                [
+                    128,
+                    64,
+                    3,
+                    3
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv23",
+            "dest": "lv24",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer2_0_bn1_weight",
+            "dest": "lv24",
+            "shape": [
+                [
+                    128
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer2_0_bn1_bias",
+            "dest": "lv24",
+            "shape": [
+                [
+                    128
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "metadata_10",
+            "dest": "lv24",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "metadata_11",
+            "dest": "lv24",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "lv24",
+            "dest": "lv25",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ],
+                [
+                    128
+                ],
+                [
+                    128
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ]
+        },
+        {
+            "src": "lv25",
+            "dest": "lv26",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv26",
+            "dest": "lv27",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer2_0_conv2_weight",
+            "dest": "lv27",
+            "shape": [
+                [
+                    128,
+                    128,
+                    3,
+                    3
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv27",
+            "dest": "lv28",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer2_0_bn2_weight",
+            "dest": "lv28",
+            "shape": [
+                [
+                    128
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer2_0_bn2_bias",
+            "dest": "lv28",
+            "shape": [
+                [
+                    128
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "metadata_12",
+            "dest": "lv28",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "metadata_13",
+            "dest": "lv28",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "lv28",
+            "dest": "lv29",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ],
+                [
+                    128
+                ],
+                [
+                    128
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ]
+        },
+        {
+            "src": "lv22",
+            "dest": "lv30",
+            "shape": [
+                [
+                    1,
+                    64,
+                    56,
+                    56
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer2_0_downsample_0_weight",
+            "dest": "lv30",
+            "shape": [
+                [
+                    128,
+                    64,
+                    1,
+                    1
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv30",
+            "dest": "lv31",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer2_0_downsample_1_weight",
+            "dest": "lv31",
+            "shape": [
+                [
+                    128
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer2_0_downsample_1_bias",
+            "dest": "lv31",
+            "shape": [
+                [
+                    128
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "metadata_14",
+            "dest": "lv31",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "metadata_15",
+            "dest": "lv31",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "lv31",
+            "dest": "lv32",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ],
+                [
+                    128
+                ],
+                [
+                    128
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ]
+        },
+        {
+            "src": "lv29",
+            "dest": "lv33",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv32",
+            "dest": "lv33",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv33",
+            "dest": "lv34",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv34",
+            "dest": "lv35",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer2_1_conv1_weight",
+            "dest": "lv35",
+            "shape": [
+                [
+                    128,
+                    128,
+                    3,
+                    3
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv35",
+            "dest": "lv36",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer2_1_bn1_weight",
+            "dest": "lv36",
+            "shape": [
+                [
+                    128
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer2_1_bn1_bias",
+            "dest": "lv36",
+            "shape": [
+                [
+                    128
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "metadata_16",
+            "dest": "lv36",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "metadata_17",
+            "dest": "lv36",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "lv36",
+            "dest": "lv37",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ],
+                [
+                    128
+                ],
+                [
+                    128
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ]
+        },
+        {
+            "src": "lv37",
+            "dest": "lv38",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv38",
+            "dest": "lv39",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer2_1_conv2_weight",
+            "dest": "lv39",
+            "shape": [
+                [
+                    128,
+                    128,
+                    3,
+                    3
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv39",
+            "dest": "lv40",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer2_1_bn2_weight",
+            "dest": "lv40",
+            "shape": [
+                [
+                    128
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer2_1_bn2_bias",
+            "dest": "lv40",
+            "shape": [
+                [
+                    128
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "metadata_18",
+            "dest": "lv40",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "metadata_19",
+            "dest": "lv40",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "lv40",
+            "dest": "lv41",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ],
+                [
+                    128
+                ],
+                [
+                    128
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ]
+        },
+        {
+            "src": "lv41",
+            "dest": "lv42",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv34",
+            "dest": "lv42",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv42",
+            "dest": "lv43",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv43",
+            "dest": "lv44",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer3_0_conv1_weight",
+            "dest": "lv44",
+            "shape": [
+                [
+                    256,
+                    128,
+                    3,
+                    3
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv44",
+            "dest": "lv45",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer3_0_bn1_weight",
+            "dest": "lv45",
+            "shape": [
+                [
+                    256
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer3_0_bn1_bias",
+            "dest": "lv45",
+            "shape": [
+                [
+                    256
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "metadata_20",
+            "dest": "lv45",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "metadata_21",
+            "dest": "lv45",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "lv45",
+            "dest": "lv46",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ],
+                [
+                    256
+                ],
+                [
+                    256
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ]
+        },
+        {
+            "src": "lv46",
+            "dest": "lv47",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv47",
+            "dest": "lv48",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer3_0_conv2_weight",
+            "dest": "lv48",
+            "shape": [
+                [
+                    256,
+                    256,
+                    3,
+                    3
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv48",
+            "dest": "lv49",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer3_0_bn2_weight",
+            "dest": "lv49",
+            "shape": [
+                [
+                    256
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer3_0_bn2_bias",
+            "dest": "lv49",
+            "shape": [
+                [
+                    256
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "metadata_22",
+            "dest": "lv49",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "metadata_23",
+            "dest": "lv49",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "lv49",
+            "dest": "lv50",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ],
+                [
+                    256
+                ],
+                [
+                    256
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ]
+        },
+        {
+            "src": "lv43",
+            "dest": "lv51",
+            "shape": [
+                [
+                    1,
+                    128,
+                    28,
+                    28
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer3_0_downsample_0_weight",
+            "dest": "lv51",
+            "shape": [
+                [
+                    256,
+                    128,
+                    1,
+                    1
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv51",
+            "dest": "lv52",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer3_0_downsample_1_weight",
+            "dest": "lv52",
+            "shape": [
+                [
+                    256
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer3_0_downsample_1_bias",
+            "dest": "lv52",
+            "shape": [
+                [
+                    256
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "metadata_24",
+            "dest": "lv52",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "metadata_25",
+            "dest": "lv52",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "lv52",
+            "dest": "lv53",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ],
+                [
+                    256
+                ],
+                [
+                    256
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ]
+        },
+        {
+            "src": "lv50",
+            "dest": "lv54",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv53",
+            "dest": "lv54",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv54",
+            "dest": "lv55",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv55",
+            "dest": "lv56",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer3_1_conv1_weight",
+            "dest": "lv56",
+            "shape": [
+                [
+                    256,
+                    256,
+                    3,
+                    3
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv56",
+            "dest": "lv57",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer3_1_bn1_weight",
+            "dest": "lv57",
+            "shape": [
+                [
+                    256
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer3_1_bn1_bias",
+            "dest": "lv57",
+            "shape": [
+                [
+                    256
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "metadata_26",
+            "dest": "lv57",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "metadata_27",
+            "dest": "lv57",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "lv57",
+            "dest": "lv58",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ],
+                [
+                    256
+                ],
+                [
+                    256
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ]
+        },
+        {
+            "src": "lv58",
+            "dest": "lv59",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv59",
+            "dest": "lv60",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer3_1_conv2_weight",
+            "dest": "lv60",
+            "shape": [
+                [
+                    256,
+                    256,
+                    3,
+                    3
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv60",
+            "dest": "lv61",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer3_1_bn2_weight",
+            "dest": "lv61",
+            "shape": [
+                [
+                    256
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer3_1_bn2_bias",
+            "dest": "lv61",
+            "shape": [
+                [
+                    256
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "metadata_28",
+            "dest": "lv61",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "metadata_29",
+            "dest": "lv61",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "lv61",
+            "dest": "lv62",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ],
+                [
+                    256
+                ],
+                [
+                    256
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ]
+        },
+        {
+            "src": "lv62",
+            "dest": "lv63",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv55",
+            "dest": "lv63",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv63",
+            "dest": "lv64",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv64",
+            "dest": "lv65",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer4_0_conv1_weight",
+            "dest": "lv65",
+            "shape": [
+                [
+                    512,
+                    256,
+                    3,
+                    3
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv65",
+            "dest": "lv66",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer4_0_bn1_weight",
+            "dest": "lv66",
+            "shape": [
+                [
+                    512
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer4_0_bn1_bias",
+            "dest": "lv66",
+            "shape": [
+                [
+                    512
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "metadata_30",
+            "dest": "lv66",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "metadata_31",
+            "dest": "lv66",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "lv66",
+            "dest": "lv67",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ],
+                [
+                    512
+                ],
+                [
+                    512
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ]
+        },
+        {
+            "src": "lv67",
+            "dest": "lv68",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv68",
+            "dest": "lv69",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer4_0_conv2_weight",
+            "dest": "lv69",
+            "shape": [
+                [
+                    512,
+                    512,
+                    3,
+                    3
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv69",
+            "dest": "lv70",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer4_0_bn2_weight",
+            "dest": "lv70",
+            "shape": [
+                [
+                    512
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer4_0_bn2_bias",
+            "dest": "lv70",
+            "shape": [
+                [
+                    512
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "metadata_32",
+            "dest": "lv70",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "metadata_33",
+            "dest": "lv70",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "lv70",
+            "dest": "lv71",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ],
+                [
+                    512
+                ],
+                [
+                    512
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ]
+        },
+        {
+            "src": "lv64",
+            "dest": "lv72",
+            "shape": [
+                [
+                    1,
+                    256,
+                    14,
+                    14
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer4_0_downsample_0_weight",
+            "dest": "lv72",
+            "shape": [
+                [
+                    512,
+                    256,
+                    1,
+                    1
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv72",
+            "dest": "lv73",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer4_0_downsample_1_weight",
+            "dest": "lv73",
+            "shape": [
+                [
+                    512
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer4_0_downsample_1_bias",
+            "dest": "lv73",
+            "shape": [
+                [
+                    512
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "metadata_34",
+            "dest": "lv73",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "metadata_35",
+            "dest": "lv73",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "lv73",
+            "dest": "lv74",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ],
+                [
+                    512
+                ],
+                [
+                    512
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ]
+        },
+        {
+            "src": "lv71",
+            "dest": "lv75",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv74",
+            "dest": "lv75",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv75",
+            "dest": "lv76",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv76",
+            "dest": "lv77",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer4_1_conv1_weight",
+            "dest": "lv77",
+            "shape": [
+                [
+                    512,
+                    512,
+                    3,
+                    3
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv77",
+            "dest": "lv78",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer4_1_bn1_weight",
+            "dest": "lv78",
+            "shape": [
+                [
+                    512
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer4_1_bn1_bias",
+            "dest": "lv78",
+            "shape": [
+                [
+                    512
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "metadata_36",
+            "dest": "lv78",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "metadata_37",
+            "dest": "lv78",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "lv78",
+            "dest": "lv79",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ],
+                [
+                    512
+                ],
+                [
+                    512
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ]
+        },
+        {
+            "src": "lv79",
+            "dest": "lv80",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv80",
+            "dest": "lv81",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer4_1_conv2_weight",
+            "dest": "lv81",
+            "shape": [
+                [
+                    512,
+                    512,
+                    3,
+                    3
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv81",
+            "dest": "lv82",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer4_1_bn2_weight",
+            "dest": "lv82",
+            "shape": [
+                [
+                    512
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_layer4_1_bn2_bias",
+            "dest": "lv82",
+            "shape": [
+                [
+                    512
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "metadata_38",
+            "dest": "lv82",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "metadata_39",
+            "dest": "lv82",
+            "shape": null,
+            "type": "relax.expr.Constant"
+        },
+        {
+            "src": "lv82",
+            "dest": "lv83",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ],
+                [
+                    512
+                ],
+                [
+                    512
+                ]
+            ],
+            "type": [
+                "float32",
+                "float32",
+                "float32"
+            ]
+        },
+        {
+            "src": "lv83",
+            "dest": "lv84",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv76",
+            "dest": "lv84",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv84",
+            "dest": "lv85",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv85",
+            "dest": "lv86",
+            "shape": [
+                [
+                    1,
+                    512,
+                    7,
+                    7
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv86",
+            "dest": "lv87",
+            "shape": [
+                [
+                    1,
+                    512,
+                    1,
+                    1
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_fc_weight",
+            "dest": "lv88",
+            "shape": [
+                [
+                    1000,
+                    512
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv87",
+            "dest": "lv89",
+            "shape": [
+                [
+                    1,
+                    512
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv88",
+            "dest": "lv89",
+            "shape": [
+                [
+                    512,
+                    1000
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv89",
+            "dest": "lv90",
+            "shape": [
+                [
+                    1,
+                    1000
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "p_fc_bias",
+            "dest": "lv90",
+            "shape": [
+                [
+                    1000
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "lv90",
+            "dest": "gv",
+            "shape": [
+                [
+                    1,
+                    1000
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        },
+        {
+            "src": "gv",
+            "dest": "output",
+            "shape": [
+                [
+                    1,
+                    1000
+                ]
+            ],
+            "type": [
+                "float32"
+            ]
+        }
+    ]
+}
