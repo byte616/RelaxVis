@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import axios from 'axios'
 
 defineProps({
   msg: String,
@@ -7,7 +8,7 @@ defineProps({
 
 const count = ref(0)
 
-const handleFileUpload = (event) => {
+const handleFileUpload = async (event) => {
   // Get the selected file
   const file = event.target.files[0];
 
@@ -15,15 +16,33 @@ const handleFileUpload = (event) => {
   if (!file) return;
   console.log("Selected file:", file.name);
 
-  // Read the file content
-  const reader = new FileReader();
-  reader.onload = (e) => {
-    console.log("--- File Content ---");
-    console.log(e.target.result);
-  };
+  // use form data to send file
+  const formData = new FormData()
+  formData.append("file", file)
 
-  // Read the file as text
-  reader.readAsText(file);
+  try {
+      const res = await axios.post("http://127.0.0.1:8000/upload", formData, {
+          headers: {
+            "Content-Type": "multipart/form-data"
+          }
+      })
+      console.log("Server response:", res.data)
+
+      if (res.data.error) {
+          // return error
+          alert(`Upload failed: ${res.data.error}`)
+      } else if (res.data.filename) {
+          // success
+          alert(`Upload success: ${res.data.filename}`)
+      } else {
+          // unknown response
+          alert(`Upload completed but response format unknown`)
+      }
+
+  } catch (err) {
+      console.error("Upload error:", err)
+      alert("Upload failed: network or server error")
+  }
 
 };
 

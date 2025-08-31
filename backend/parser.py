@@ -267,7 +267,26 @@ def IRparser(g, f):
                         else:
                             print(f"Error: Node {arg} not found.")
                             exit(1)
-                            
+
+
+# call by FastAPI
+def parse(filepath):
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            g = Graph() # create empty graph, record nodes and edges
+            IRparser(g, f) # parse file and build graph             
+            # Debug(g) # debug test output
+            if len(g.nodes) == 0 and len(g.edges) == 0: # if there is no node and edge --> wrong file
+                print("Error: No node and edge parsed.")
+                return False
+            Export_json(g, filepath) # export to json file 
+                     
+    except FileNotFoundError:
+        print(f"File not found: {filepath}")
+
+    return True
+
+
 def main():
     # parse command line arguments
     parser = argparse.ArgumentParser(description = "Arguments: ")
