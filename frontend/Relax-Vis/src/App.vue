@@ -1,14 +1,19 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import { useRoute } from "vue-router";
+
+const route = useRoute();
 </script>
 
 <template>
   <div>
-    <a href="https://github.com/byte616/RelaxVis/tree/main" target="_blank">
+    <!-- show logo only on home page -->
+    <a v-if="route.name === 'Home'" href="https://github.com/byte616/RelaxVis/tree/main" target="_blank">
       <img src="./assets/cover.png" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <HelloWorld msg="Relax Visualization" />
+
+  <!-- router switch between homepage & graph page -->
+  <router-view />
 </template>
 
 <style scoped>

@@ -1,75 +1,69 @@
 <script setup>
 import { ref } from 'vue'
 import axios from 'axios'
+import { useRouter } from 'vue-router'
 
 defineProps({
   msg: String,
 })
 
-const count = ref(0)
+const router = useRouter()
+const isOpen = ref(false)
 
 const handleFileUpload = async (event) => {
-  // Get the selected file
+  // get the selected file
   const file = event.target.files[0];
-
-  // Ensure a file was selected
   if (!file) return;
+
   console.log("Selected file:", file.name);
 
-  // use form data to send file
   const formData = new FormData()
   formData.append("file", file)
 
+  // send POST request to backend
   try {
-      const res = await axios.post("http://127.0.0.1:8000/upload", formData, {
-          headers: {
-            "Content-Type": "multipart/form-data"
-          }
-      })
-      console.log("Server response:", res.data)
-
-      if (res.data.error) {
-          // return error
-          alert(`Upload failed: ${res.data.error}`)
-      } else if (res.data.graph) {
-          // success
-          alert(`Upload success: ${res.data.filename}`)
-          console.log("Nodes:", res.data.graph.nodes);
-          console.log("Edges:", res.data.graph.edges);
-      } else {
-          // unknown response
-          alert(`Upload completed but response format unknown`)
+    const res = await axios.post("http://127.0.0.1:8000/upload", formData, {
+      headers: {
+        "Content-Type": "multipart/form-data"
       }
+    })
+    console.log("Server response:", res.data)
+
+    // handle response
+    if (res.data.error) {
+      alert(`Upload failed: ${res.data.error}`)
+    } else if (res.data.graph) {
+      // assume response contains a 'graph' field with the graph data
+      alert(`Upload success: ${res.data.filename}`)
+      //  navigate to graph page 
+      router.push({
+        name: 'GraphPage',
+        query: { filename: res.data.filename }
+      })
+    } else {
+      alert(`Upload completed but response format unknown`)
+    }
 
   } catch (err) {
-      console.error("Upload error:", err)
-      alert("Upload failed: network or server error")
+    console.error("Upload error:", err)
+    alert("Upload failed: network or server error")
   }
+}
 
-};
-
-// Dropdown menu state
-const isOpen = ref(false)
 const toggleMenu = () => {
   isOpen.value = !isOpen.value
 }
-
 </script>
 
 <template>
   <div class="upload-section">
-    <!-- hide input -->
-    <input 
-      type="file" 
-      id="ir-upload" 
-      @change="handleFileUpload" 
+    <input
+      type="file"
+      id="ir-upload"
+      @change="handleFileUpload"
       class="hidden-input"
     >
-    
-    <!-- button -->
-    <label for="ir-upload" class="upload-btn">
-      Open Model
-    </label>
+    <label for="ir-upload" class="upload-btn">Open Model</label>
   </div>
 
   <div class="app">
@@ -79,25 +73,20 @@ const toggleMenu = () => {
       <span></span>
       <span></span>
     </div>
-    
+
     <!-- menu -->
     <div class="sidebar" :class="{ open: isOpen }">
       <ul>
         <li><a href="https://github.com/byte616/RelaxVis/issues">Report Issue</a></li>
       </ul>
     </div>
-    
+
     <!-- mask -->
     <div v-if="isOpen" class="overlay" @click="toggleMenu"></div>
   </div>
-  
 </template>
 
-
 <style scoped>
-.read-the-docs {
-  color: #888;
-}
 .upload-section {
   margin-top: 2rem;
   text-align: center;
@@ -124,7 +113,6 @@ const toggleMenu = () => {
   color: white;
 }
 
-/* hamburger button */
 .hamburger {
   position: absolute;
   top: 10px;
@@ -141,11 +129,10 @@ const toggleMenu = () => {
   background: #ccc;
 }
 
-/* menu */
 .sidebar {
   position: fixed;
   top: 0;
-  left: -250px; /* hide */
+  left: -250px;
   width: 250px;
   height: 100%;
   background: #2a2a2a;
@@ -155,7 +142,7 @@ const toggleMenu = () => {
 }
 
 .sidebar.open {
-  left: 0; /* show */
+  left: 0;
 }
 
 .sidebar ul {
@@ -177,7 +164,6 @@ const toggleMenu = () => {
   color: white;
 }
 
-/* mask */
 .overlay {
   position: fixed;
   top: 0;
