@@ -31,9 +31,11 @@ const handleFileUpload = async (event) => {
       if (res.data.error) {
           // return error
           alert(`Upload failed: ${res.data.error}`)
-      } else if (res.data.filename) {
+      } else if (res.data.graph) {
           // success
           alert(`Upload success: ${res.data.filename}`)
+          console.log("Nodes:", res.data.graph.nodes);
+          console.log("Edges:", res.data.graph.edges);
       } else {
           // unknown response
           alert(`Upload completed but response format unknown`)

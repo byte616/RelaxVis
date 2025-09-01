@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 import shutil
 import os
 import parser
+import json
 
 app = FastAPI()
 
@@ -18,7 +19,8 @@ app.add_middleware(
 @app.post("/upload")
 async def upload_file(file: UploadFile = File(...)):
     # save file to uploads/
-    with open(f"uploads/{file.filename}", "wb") as buffer:
+    save_path = f"uploads/{file.filename}"
+    with open(save_path, "wb") as buffer:
         shutil.copyfileobj(file.file, buffer)
 
     print(f"file save: {file.filename}")
@@ -27,4 +29,17 @@ async def upload_file(file: UploadFile = File(...)):
     success = parser.parse(f"uploads/{file.filename}")
     if not success:
         return {"error": "Failed to parse the file."}
-    return {"filename": file.filename}
+    
+    # check if json exists 
+    json_path = f"{save_path}.json"
+    if not os.path.exists(json_path):
+        return {"error": f"JSON not found: {json_path}"}
+    
+    # load json data
+    with open(json_path, "r", encoding="utf-8") as f:
+        graph_data = json.load(f)
+
+    return {
+        "filename": file.filename, 
+        "graph": graph_data
+    }
